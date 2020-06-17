@@ -17,11 +17,11 @@ export default {
   methods: {
     handleChange(){
       eventBus.$emit('country-selected', this.selected)
-    }
+    },
   },
   data(){
     return {
-    selected: null
+    selected: null,
   }
   }
 }
