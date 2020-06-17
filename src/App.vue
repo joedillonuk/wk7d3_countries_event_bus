@@ -2,15 +2,17 @@
   <div>
     <h1>Countries</h1>
     <div>
-      <countries-list :countries='countries'></countries-list>
+      <country-select :countries='countries'></country-select>
+      <!-- <countries-list :countries='countries'></countries-list> -->
       <country-detail :country='selectedCountry'></country-detail>
     </div>
   </div>
 </template>
 
 <script>
-import CountriesList from './components/CountriesList.vue';
+// import CountriesList from './components/CountriesList.vue';
 import CountryDetail from './components/CountryDetail.vue';
+import CountrySelect from './components/CountrySelect.vue';
 
 
 import { eventBus } from './main.js'
@@ -33,16 +35,17 @@ export default {
 
   },
   components: {
-    "countries-list": CountriesList,
-    "country-detail": CountryDetail
+    // "countries-list": CountriesList,
+    "country-detail": CountryDetail,
+    "country-select": CountrySelect
   }
 
 }
 </script>
 
 <style>
-  .main-container {
-    display: flex;
-    justify-content: space-between;
-  }
+.main-container {
+  display: flex;
+  justify-content: space-between;
+}
 </style>
